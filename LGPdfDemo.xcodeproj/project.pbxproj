@@ -14,6 +14,7 @@
 		5E3C2B251D7EC61B00E96976 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5E3C2B241D7EC61B00E96976 /* Assets.xcassets */; };
 		5E3C2B281D7EC61B00E96976 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5E3C2B261D7EC61B00E96976 /* LaunchScreen.storyboard */; };
 		5E3C2B4F1D7EC77500E96976 /* LGPdf.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E3C2B4A1D7EC66B00E96976 /* LGPdf.framework */; };
+		5EF2A9BD1D82BCA400BE63E3 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 5EF2A9BC1D82BCA400BE63E3 /* README.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +39,7 @@
 		5E3C2B271D7EC61B00E96976 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5E3C2B291D7EC61B00E96976 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5E3C2B451D7EC66A00E96976 /* LGPdf.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = LGPdf.xcodeproj; path = LGPdf/LGPdf.xcodeproj; sourceTree = "<group>"; };
+		5EF2A9BC1D82BCA400BE63E3 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +74,7 @@
 		5E3C2B171D7EC61B00E96976 /* LGPdfDemo */ = {
 			isa = PBXGroup;
 			children = (
+				5EF2A9BC1D82BCA400BE63E3 /* README.md */,
 				5E3C2B1B1D7EC61B00E96976 /* AppDelegate.h */,
 				5E3C2B1C1D7EC61B00E96976 /* AppDelegate.m */,
 				5E3C2B1E1D7EC61B00E96976 /* ViewController.h */,
@@ -189,6 +192,7 @@
 			files = (
 				5E3C2B201D7EC61B00E96976 /* ViewController.m in Sources */,
 				5E3C2B1D1D7EC61B00E96976 /* AppDelegate.m in Sources */,
+				5EF2A9BD1D82BCA400BE63E3 /* README.md in Sources */,
 				5E3C2B1A1D7EC61B00E96976 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
