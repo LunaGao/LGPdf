@@ -40,6 +40,16 @@
     return fontSize.height;
 }
 
+- (void)add:(LGPdfText*)element withPoint:(CGPoint)point withSize:(CGSize)size {
+    self.LGPdfTextElement = element;
+    NSMutableParagraphStyle *paragraph = [[NSMutableParagraphStyle alloc] init];
+    paragraph.alignment = self.LGPdfTextElement.align;
+    NSDictionary *dict = @{NSFontAttributeName: self.LGPdfTextElement.font,
+                           NSParagraphStyleAttributeName: paragraph,
+                           NSForegroundColorAttributeName: self.LGPdfTextElement.foregroundColor};
+    [self.LGPdfTextElement.text drawInRect:CGRectMake(point.x, point.y, size.width, size.height) withAttributes:dict];
+}
+
 - (float)getTextHeight:(LGPdfText*)element withPageInfo:(LGPageInfo)pageInfo withNowHeight:(int)LGPdf_write_height {
     self.LGPdfTextElement = element;
     NSMutableParagraphStyle *paragraph = [[NSMutableParagraphStyle alloc] init];

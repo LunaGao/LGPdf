@@ -19,6 +19,7 @@
 @property(atomic) int paddignRight; // default 10
 @property(atomic) float borderWidth; // default 1
 @property(atomic) Boolean fullLine; // default YES
+@property(atomic) NSArray* LGPdf_Table_widths;
 
 @property(atomic) NSMutableArray* cells;
 

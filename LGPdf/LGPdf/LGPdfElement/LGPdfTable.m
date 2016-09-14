@@ -9,7 +9,6 @@
 #import "LGPdfTable.h"
 
 @implementation LGPdfTable {
-    NSArray* LGPdf_Table_widths;
     NSArray* LGPdf_Table_perWidths;
 }
 
@@ -26,7 +25,6 @@
         self.borderWidth = 1;
         self.cells = [[NSMutableArray alloc] init];
         self.tableCellConfig = [[NSMutableArray alloc] init];
-//        [self.tableCellConfig addObject:[[NSMutableArray alloc] init]];
         return self;
     }
     return nil;
@@ -61,7 +59,6 @@
             if (rowIndex < element.rowspan - 1 && element.rowspan != 1) {
                 config.isBottomInCell = YES;
             }
-            NSLog(@"row:%d, col:%d, T:%d R:%d B:%d L:%d", config.row, config.column, config.isTopInCell, config.isRightInCell, config.isBottomInCell, config.isLeftInCell);
             self.tableCellConfig[firstRowIndex + rowIndex][firstColumnIndex + columnIndex] = config;
         }
     }
@@ -111,8 +108,8 @@
 }
 
 - (void)setColumnsWidth:(NSArray*) widths {
-    LGPdf_Table_widths = widths;
-    self.columns = LGPdf_Table_widths.count;
+    self.LGPdf_Table_widths = widths;
+    self.columns = self.LGPdf_Table_widths.count;
     [self addFirstRowCells];
 }
 
@@ -124,27 +121,27 @@
 
 - (void)DOMORETHINGS {
     self.tableWidth = self.tableWidth - self.paddignRight - self.paddingLeft;
-    if (!LGPdf_Table_widths) {
+    if (!self.LGPdf_Table_widths) {
         self.columns = LGPdf_Table_perWidths.count;
         NSMutableArray *perWidth = [[NSMutableArray alloc] init];
         for (int i = 0; i < LGPdf_Table_perWidths.count; i++) {
             [perWidth addObject:[NSNumber numberWithFloat:(self.tableWidth*[LGPdf_Table_perWidths[i] floatValue])]];
         }
-        LGPdf_Table_widths = [[NSArray alloc] initWithArray:perWidth copyItems:YES];
+        self.LGPdf_Table_widths = [[NSArray alloc] initWithArray:perWidth copyItems:YES];
     } else {
-        self.columns = LGPdf_Table_widths.count;
+        self.columns = self.LGPdf_Table_widths.count;
     }
 }
 
 - (int)getCellWidth:(int)column WithRow:(int)row WithColumnCount:(int)columnCount WithRowCount:(int)rowCount {
 #warning need to more things
-    return [LGPdf_Table_widths[column] intValue];
+    return [self.LGPdf_Table_widths[column] intValue];
 }
 
 - (int)getCellX:(int)column {
     int length = 0;
     for (int i = 0; i < column; i++) {
-        length = length + [LGPdf_Table_widths[i] intValue];
+        length = length + [self.LGPdf_Table_widths[i] intValue];
     }
     return length;
 }

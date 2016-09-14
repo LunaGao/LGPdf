@@ -69,7 +69,7 @@
     [self addCell:table WithValue:@"16" WithColSpan:1 WithRowSpan:1];
     [self addCell:table WithValue:@"17" WithColSpan:2 WithRowSpan:1];
     [self addCell:table WithValue:@"18" WithColSpan:1 WithRowSpan:1];
-    [self addCell:table WithValue:@"19" WithColSpan:4 WithRowSpan:1];
+    [self addCell:table WithValue:@"ADSL放假啊撩是斗非加辣；世纪东方拉丝机地方了；as江东父老；卡机地方了；卡十几分；卢卡斯姐地方了；卡机发卢卡斯姐发来；卡机发来；卡介绍的；浪费空间啊收到了；副科级啊数量；飞康就" WithColSpan:4 WithRowSpan:1];
     
     [pdf addTable:table];
     
@@ -80,7 +80,11 @@
     LGPdfCell *cell = [[LGPdfCell alloc] init];
     LGPdfText* text = [[LGPdfText alloc] init];
     [text setText:value];
-    [text setFont:[UIFont boldSystemFontOfSize:9]];
+    if ([value isEqualToString:@"9"]) {
+        [text setFont:[UIFont boldSystemFontOfSize:19]];
+    } else {
+        [text setFont:[UIFont boldSystemFontOfSize:9]];
+    }
     [cell setElement:text];
     [cell setColspan:colspan];
     [cell setRowspan:rowSpan];

@@ -47,7 +47,6 @@
             LGPdfPoint *point = [[LGPdfPoint alloc] init];
             point.x = [LGPdf_table_pdfElement getCellX:j] + LGPdf_table_pdfElement.location.x;
             point.y = LGPdf_table_pdfElement.location.y + LGPdf_table_now_Height;
-            NSLog(@"x => %d", point.x);
             [rowArray addObject:point];
         }
         [LGPdf_tablePoint addObject:rowArray];
@@ -58,7 +57,6 @@
     for (int i = 1; i <= LGPdf_table_pdfElement.tableCellConfig.count; i ++) {
         for (int j = 0; j <= LGPdf_table_pdfElement.columns; j ++) {
             LGPdf_tablePoint[i][j].y = LGPdf_tablePoint[i-1][j].y + [LGPdf_tableRowHeights[i - 1] intValue] + LGPdf_table_now_Height;
-            NSLog(@"y => %d", LGPdf_tablePoint[i][j].y);
         }
     }
 }
@@ -84,6 +82,9 @@
         float height = 0;
         for(int j = 0 ; j < LGPdf_table_pdfElement.columns; j++) {
             [self drawCellLines:LGPdf_table_pdfElement.tableCellConfig[i][j]];
+            if (!LGPdf_table_pdfElement.tableCellConfig[i][j].isTopInCell && !LGPdf_table_pdfElement.tableCellConfig[i][j].isLeftInCell) {
+                [self drawOneCell:LGPdf_table_pdfElement.tableCellConfig[i][j].cell withCellConfig:LGPdf_table_pdfElement.tableCellConfig[i][j]];
+            }
         }
     }
 }
@@ -123,15 +124,21 @@
     }
 }
 
-- (float) drawOneCell:(LGPdfCell *) cell withColumn:(int)column withRow:(int)row {
+- (float) drawOneCell:(LGPdfCell *) cell withCellConfig:(LGPdfCellConfig*) cellConfig{
     if (cell) {
         if ([cell.element isKindOfClass:[LGPdfText class]]) {
             LGPdfText *text = (LGPdfText *)cell.element;
-            int lenght = [LGPdf_table_pdfElement getCellWidth:column WithRow:row WithColumnCount:1 WithRowCount:1];
-            text.length = lenght;
-            struct CGPoint point = {[LGPdf_table_pdfElement getCellX:column], 0};
-            text.location = point;
-            return [textController add:text withPageInfo:LGPdf_table_pageInfo withNowHeight:LGPdf_table_now_Height];
+            struct CGPoint point = {LGPdf_tablePoint[cellConfig.row][cellConfig.column].x, LGPdf_tablePoint[cellConfig.row][cellConfig.column].y};
+            int width = 0;
+            for (int i = 0; i < cell.colspan; i ++) {
+                width = width + [LGPdf_table_pdfElement.LGPdf_Table_widths[cellConfig.column + i] intValue];
+            }
+            int height = 0;
+            for (int i = 0; i < cell.rowspan; i ++) {
+                height = height + [LGPdf_tableRowHeights[cellConfig.row + i] intValue];
+            }
+            struct CGSize size = {width, height};
+            [textController add:text withPoint:point withSize:size];
         }
     } else {
 #warning cell is nil

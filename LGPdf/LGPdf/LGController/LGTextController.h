@@ -18,6 +18,7 @@
 
 - (float)add:(LGPdfText*)element withPageInfo:(LGPageInfo)pageInfo withNowHeight:(int)LGPdf_write_height;
 - (float)getTextHeight:(LGPdfText*)element withPageInfo:(LGPageInfo)pageInfo withNowHeight:(int)LGPdf_write_height;
+- (void)add:(LGPdfText*)element withPoint:(CGPoint)point withSize:(CGSize)size;
 
 - (int)getTextHeight;
 
