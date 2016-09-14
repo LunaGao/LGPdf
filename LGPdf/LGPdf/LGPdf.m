@@ -75,24 +75,4 @@ CGContextRef LGPdf_pdfContext;
     [controller addTable:element withContext:LGPdf_pdfContext withPageInfo:LGPdf_pageInfo];
 }
 
-#pragma mark - pdf test
-
-- (void)testPDF {
-    for (int i = 0; i < 6; i++) {
-        if (i % 2 == 0) {
-            //创建PDF页
-            [self newPage];
-        }
-        
-        CGContextSetTextDrawingMode(LGPdf_pdfContext, kCGTextFill);
-        CGContextMoveToPoint(LGPdf_pdfContext, 50, LGPdf_write_height);
-        
-        CGContextAddLineToPoint(LGPdf_pdfContext, 612-50, LGPdf_write_height);
-        
-        CGContextStrokePath(LGPdf_pdfContext);
-    }
-    
-    UIGraphicsEndPDFContext();
-}
-
 @end

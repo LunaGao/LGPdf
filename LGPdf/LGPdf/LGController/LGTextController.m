@@ -26,7 +26,6 @@
         } else {
             fontSize.width = self.LGPdfTextElement.length;
         }
-        
     }
     if (self.LGPdfTextElement.fullHeight) {
         fontSize.height = pageInfo.height;
@@ -38,6 +37,21 @@
     }
     [self.LGPdfTextElement.text drawInRect:CGRectMake(self.LGPdfTextElement.location.x, y, fontSize.width, fontSize.height) withAttributes:dict];
     self.LGPdfTextFontSize = fontSize;
+    return fontSize.height;
+}
+
+- (float)getTextHeight:(LGPdfText*)element withPageInfo:(LGPageInfo)pageInfo withNowHeight:(int)LGPdf_write_height {
+    self.LGPdfTextElement = element;
+    NSMutableParagraphStyle *paragraph = [[NSMutableParagraphStyle alloc] init];
+    paragraph.alignment = self.LGPdfTextElement.align;
+    NSDictionary *dict = @{NSFontAttributeName: self.LGPdfTextElement.font,
+                           NSParagraphStyleAttributeName: paragraph,
+                           NSForegroundColorAttributeName: self.LGPdfTextElement.foregroundColor};
+    
+    CGSize fontSize = [self.LGPdfTextElement.text sizeWithFont:self.LGPdfTextElement.font constrainedToSize:CGSizeZero lineBreakMode:NSLineBreakByWordWrapping];
+    if (self.LGPdfTextElement.fullHeight) {
+        fontSize.height = pageInfo.height;
+    }
     return fontSize.height;
 }
 

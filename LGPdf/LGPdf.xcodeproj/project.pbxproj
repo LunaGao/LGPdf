@@ -26,6 +26,10 @@
 		5E3C2B761D8255AC00E96976 /* LGPdfLine.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E3C2B741D8255AC00E96976 /* LGPdfLine.m */; };
 		5E3C2B791D82568600E96976 /* LGLineController.h in Headers */ = {isa = PBXBuildFile; fileRef = 5E3C2B771D82568600E96976 /* LGLineController.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5E3C2B7A1D82568600E96976 /* LGLineController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E3C2B781D82568600E96976 /* LGLineController.m */; };
+		5E6335801D8945BC009A4D46 /* LGPdfPoint.h in Headers */ = {isa = PBXBuildFile; fileRef = 5E63357E1D8945BC009A4D46 /* LGPdfPoint.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5E6335811D8945BC009A4D46 /* LGPdfPoint.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E63357F1D8945BC009A4D46 /* LGPdfPoint.m */; };
+		5EA4A2E41D8653520030F2AB /* LGPdfCellConfig.h in Headers */ = {isa = PBXBuildFile; fileRef = 5EA4A2E21D8653520030F2AB /* LGPdfCellConfig.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5EA4A2E51D8653520030F2AB /* LGPdfCellConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EA4A2E31D8653520030F2AB /* LGPdfCellConfig.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +54,10 @@
 		5E3C2B741D8255AC00E96976 /* LGPdfLine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LGPdfLine.m; path = LGPdfElement/LGPdfLine.m; sourceTree = "<group>"; };
 		5E3C2B771D82568600E96976 /* LGLineController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LGLineController.h; path = LGController/LGLineController.h; sourceTree = "<group>"; };
 		5E3C2B781D82568600E96976 /* LGLineController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LGLineController.m; path = LGController/LGLineController.m; sourceTree = "<group>"; };
+		5E63357E1D8945BC009A4D46 /* LGPdfPoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LGPdfPoint.h; path = LGPdfElement/LGPdfPoint.h; sourceTree = "<group>"; };
+		5E63357F1D8945BC009A4D46 /* LGPdfPoint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LGPdfPoint.m; path = LGPdfElement/LGPdfPoint.m; sourceTree = "<group>"; };
+		5EA4A2E21D8653520030F2AB /* LGPdfCellConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LGPdfCellConfig.h; path = LGPdfElement/LGPdfCellConfig.h; sourceTree = "<group>"; };
+		5EA4A2E31D8653520030F2AB /* LGPdfCellConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LGPdfCellConfig.m; path = LGPdfElement/LGPdfCellConfig.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +113,10 @@
 				5E3C2B611D81598F00E96976 /* LGPdfCell.m */,
 				5E3C2B731D8255AC00E96976 /* LGPdfLine.h */,
 				5E3C2B741D8255AC00E96976 /* LGPdfLine.m */,
+				5EA4A2E21D8653520030F2AB /* LGPdfCellConfig.h */,
+				5EA4A2E31D8653520030F2AB /* LGPdfCellConfig.m */,
+				5E63357E1D8945BC009A4D46 /* LGPdfPoint.h */,
+				5E63357F1D8945BC009A4D46 /* LGPdfPoint.m */,
 			);
 			name = LGPdfElement;
 			sourceTree = "<group>";
@@ -129,6 +141,8 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5E6335801D8945BC009A4D46 /* LGPdfPoint.h in Headers */,
+				5EA4A2E41D8653520030F2AB /* LGPdfCellConfig.h in Headers */,
 				5E3C2B751D8255AC00E96976 /* LGPdfLine.h in Headers */,
 				5E3C2B791D82568600E96976 /* LGLineController.h in Headers */,
 				5E3C2B711D81B54900E96976 /* LGTextController.h in Headers */,
@@ -216,7 +230,9 @@
 				5E3C2B761D8255AC00E96976 /* LGPdfLine.m in Sources */,
 				5E3C2B5B1D7ECEB400E96976 /* LGPdfText.m in Sources */,
 				5E3C2B721D81B54900E96976 /* LGTextController.m in Sources */,
+				5EA4A2E51D8653520030F2AB /* LGPdfCellConfig.m in Sources */,
 				5E3C2B4D1D7EC6A300E96976 /* LGPdf.m in Sources */,
+				5E6335811D8945BC009A4D46 /* LGPdfPoint.m in Sources */,
 				5E3C2B571D7ECDD200E96976 /* LGPdfBaseElement.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

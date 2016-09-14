@@ -41,7 +41,4 @@ FOUNDATION_EXPORT const unsigned char LGPdfVersionString[];
 - (void)addText:(LGPdfText *)element;
 - (void)addTable:(LGPdfTable *)element;
 
-// test
-- (void)testPDF;
-
 @end

@@ -8,10 +8,12 @@
 
 #import "LGPdfBaseElement.h"
 #import "LGPdfCell.h"
+#import "LGPdfCellConfig.h"
 
 @interface LGPdfTable : LGPdfBaseElement
 
 @property(atomic) int columns; // default 1
+@property(atomic) int rows; // default 0;
 @property(atomic) int tableWidth; // default -1
 @property(atomic) int paddingLeft; // default 10
 @property(atomic) int paddignRight; // default 10
@@ -19,6 +21,8 @@
 @property(atomic) Boolean fullLine; // default YES
 
 @property(atomic) NSMutableArray* cells;
+
+@property NSMutableArray<NSMutableArray<LGPdfCellConfig *> *> *tableCellConfig;
 
 - (void)setColumnsWidth:(NSArray *) widths;
 - (void)setColumnsWidthByPercent:(NSArray*) widths;

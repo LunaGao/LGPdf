@@ -15,6 +15,8 @@
     if (self) {
         self.element = nil;
         self.length = -1;
+        self.rowspan = 1;
+        self.colspan = 1;
         return self;
     }
     return nil;

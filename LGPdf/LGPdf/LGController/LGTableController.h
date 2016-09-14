@@ -10,6 +10,7 @@
 #import "LGPdfTable.h"
 #import "LGPdfPageInfo.h"
 #import "LGPdfText.h"
+#import "LGPdfPoint.h"
 
 #import "LGTextController.h"
 #import "LGLineController.h"
