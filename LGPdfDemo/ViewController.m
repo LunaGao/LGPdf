@@ -73,6 +73,22 @@
     
     [pdf addTable:table];
     
+    // image
+    LGPdfImage *image = [[LGPdfImage alloc] init];
+    UIImage *uiImage = [UIImage imageNamed:@"pdf_png"];
+//    NSData *data = UIImagePNGRepresentation(uiImage);
+    [image setImage:uiImage];
+//    [image setData:data];
+    struct CGSize imageSize = {100, 100};
+    [image setSize:imageSize];
+    
+    [pdf addImage:image];
+    
+    // https://cdn.rawgit.com/LunaGao/LGPdf/master/Image/pdf.png
+//    https://cdn.rawgit.com/LunaGao/LGPdf/master/Image/pdf.svg
+    
+    
+    
     [pdf closeToWrite];
 }
 

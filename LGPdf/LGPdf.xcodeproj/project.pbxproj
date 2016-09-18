@@ -28,6 +28,10 @@
 		5E3C2B7A1D82568600E96976 /* LGLineController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E3C2B781D82568600E96976 /* LGLineController.m */; };
 		5E6335801D8945BC009A4D46 /* LGPdfPoint.h in Headers */ = {isa = PBXBuildFile; fileRef = 5E63357E1D8945BC009A4D46 /* LGPdfPoint.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5E6335811D8945BC009A4D46 /* LGPdfPoint.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E63357F1D8945BC009A4D46 /* LGPdfPoint.m */; };
+		5E6335B21D8E25AE009A4D46 /* LGImageController.h in Headers */ = {isa = PBXBuildFile; fileRef = 5E6335B01D8E25AE009A4D46 /* LGImageController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5E6335B31D8E25AE009A4D46 /* LGImageController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E6335B11D8E25AE009A4D46 /* LGImageController.m */; };
+		5E6335B61D8E2601009A4D46 /* LGPdfImage.h in Headers */ = {isa = PBXBuildFile; fileRef = 5E6335B41D8E2601009A4D46 /* LGPdfImage.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5E6335B71D8E2601009A4D46 /* LGPdfImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E6335B51D8E2601009A4D46 /* LGPdfImage.m */; };
 		5EA4A2E41D8653520030F2AB /* LGPdfCellConfig.h in Headers */ = {isa = PBXBuildFile; fileRef = 5EA4A2E21D8653520030F2AB /* LGPdfCellConfig.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5EA4A2E51D8653520030F2AB /* LGPdfCellConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EA4A2E31D8653520030F2AB /* LGPdfCellConfig.m */; };
 /* End PBXBuildFile section */
@@ -56,6 +60,10 @@
 		5E3C2B781D82568600E96976 /* LGLineController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LGLineController.m; path = LGController/LGLineController.m; sourceTree = "<group>"; };
 		5E63357E1D8945BC009A4D46 /* LGPdfPoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LGPdfPoint.h; path = LGPdfElement/LGPdfPoint.h; sourceTree = "<group>"; };
 		5E63357F1D8945BC009A4D46 /* LGPdfPoint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LGPdfPoint.m; path = LGPdfElement/LGPdfPoint.m; sourceTree = "<group>"; };
+		5E6335B01D8E25AE009A4D46 /* LGImageController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LGImageController.h; path = LGController/LGImageController.h; sourceTree = "<group>"; };
+		5E6335B11D8E25AE009A4D46 /* LGImageController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LGImageController.m; path = LGController/LGImageController.m; sourceTree = "<group>"; };
+		5E6335B41D8E2601009A4D46 /* LGPdfImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LGPdfImage.h; path = LGPdfElement/LGPdfImage.h; sourceTree = "<group>"; };
+		5E6335B51D8E2601009A4D46 /* LGPdfImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LGPdfImage.m; path = LGPdfElement/LGPdfImage.m; sourceTree = "<group>"; };
 		5EA4A2E21D8653520030F2AB /* LGPdfCellConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LGPdfCellConfig.h; path = LGPdfElement/LGPdfCellConfig.h; sourceTree = "<group>"; };
 		5EA4A2E31D8653520030F2AB /* LGPdfCellConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LGPdfCellConfig.m; path = LGPdfElement/LGPdfCellConfig.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -117,6 +125,8 @@
 				5EA4A2E31D8653520030F2AB /* LGPdfCellConfig.m */,
 				5E63357E1D8945BC009A4D46 /* LGPdfPoint.h */,
 				5E63357F1D8945BC009A4D46 /* LGPdfPoint.m */,
+				5E6335B41D8E2601009A4D46 /* LGPdfImage.h */,
+				5E6335B51D8E2601009A4D46 /* LGPdfImage.m */,
 			);
 			name = LGPdfElement;
 			sourceTree = "<group>";
@@ -130,6 +140,8 @@
 				5E3C2B701D81B54900E96976 /* LGTextController.m */,
 				5E3C2B771D82568600E96976 /* LGLineController.h */,
 				5E3C2B781D82568600E96976 /* LGLineController.m */,
+				5E6335B01D8E25AE009A4D46 /* LGImageController.h */,
+				5E6335B11D8E25AE009A4D46 /* LGImageController.m */,
 			);
 			name = LGController;
 			sourceTree = "<group>";
@@ -141,6 +153,8 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5E6335B61D8E2601009A4D46 /* LGPdfImage.h in Headers */,
+				5E6335B21D8E25AE009A4D46 /* LGImageController.h in Headers */,
 				5E6335801D8945BC009A4D46 /* LGPdfPoint.h in Headers */,
 				5EA4A2E41D8653520030F2AB /* LGPdfCellConfig.h in Headers */,
 				5E3C2B751D8255AC00E96976 /* LGPdfLine.h in Headers */,
@@ -223,6 +237,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5E6335B31D8E25AE009A4D46 /* LGImageController.m in Sources */,
 				5E3C2B7A1D82568600E96976 /* LGLineController.m in Sources */,
 				5E3C2B5F1D8155EA00E96976 /* LGPdfTable.m in Sources */,
 				5E3C2B6E1D81B53100E96976 /* LGTableController.m in Sources */,
@@ -234,6 +249,7 @@
 				5E3C2B4D1D7EC6A300E96976 /* LGPdf.m in Sources */,
 				5E6335811D8945BC009A4D46 /* LGPdfPoint.m in Sources */,
 				5E3C2B571D7ECDD200E96976 /* LGPdfBaseElement.m in Sources */,
+				5E6335B71D8E2601009A4D46 /* LGPdfImage.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

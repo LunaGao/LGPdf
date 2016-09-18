@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 #import <LGPdf/LGPdf.h>
-#import <LGPdf/LGPdfPageInfo.h>
-#import <LGPdf/LGPdfText.h>
 
 @interface ViewController : UIViewController
 

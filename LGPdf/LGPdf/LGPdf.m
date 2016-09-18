@@ -8,11 +8,14 @@
 
 #import "LGPdf.h"
 
-@implementation LGPdf
-
-int LGPdf_write_height;
-LGPageInfo LGPdf_pageInfo;
-CGContextRef LGPdf_pdfContext;
+@implementation LGPdf {
+    int LGPdf_write_height;
+    LGPageInfo LGPdf_pageInfo;
+    CGContextRef LGPdf_pdfContext;
+    LGTableController *tableController;
+    LGTextController *textController;
+    LGImageController *imageController;
+}
 
 #pragma mark - pdf create
 
@@ -21,7 +24,6 @@ CGContextRef LGPdf_pdfContext;
     static dispatch_once_t predicate;
     dispatch_once(&predicate, ^{
         pdfInstance = [[self alloc] init];
-        LGPdf_write_height = 0;
     });
     return pdfInstance;
 }
@@ -32,6 +34,10 @@ CGContextRef LGPdf_pdfContext;
     NSString *path = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES)[0];
     self.pdfFileFullPath = [path stringByAppendingPathComponent:fileName];
     LGPdf_pageInfo = pageInfo;
+    
+    tableController = [[LGTableController alloc] init];
+    textController = [[LGTextController alloc] init];
+    imageController = [[LGImageController alloc] init];
 }
 
 #pragma mark - pdf page
@@ -54,9 +60,8 @@ CGContextRef LGPdf_pdfContext;
 #pragma mark - add text
 
 - (void)addText:(LGPdfText*)element {
-    LGTextController *controller = [[LGTextController alloc] init];
-    [controller add:element withPageInfo:LGPdf_pageInfo withNowHeight:LGPdf_write_height];
-    LGPdf_write_height = LGPdf_write_height + [controller getTextHeight];
+    [textController add:element withPageInfo:LGPdf_pageInfo withNowHeight:LGPdf_write_height];
+    LGPdf_write_height = LGPdf_write_height + [textController getTextHeight];
 }
 
 #pragma mark - add table
@@ -71,8 +76,16 @@ CGContextRef LGPdf_pdfContext;
     }
     
     [element DOMORETHINGS];
-    LGTableController *controller = [[LGTableController alloc] init];
-    [controller addTable:element withContext:LGPdf_pdfContext withPageInfo:LGPdf_pageInfo];
+    [tableController addTable:element withContext:LGPdf_pdfContext withPageInfo:LGPdf_pageInfo];
+    LGPdf_write_height = LGPdf_write_height + [tableController getTableHeight];
+}
+
+
+#pragma mark - add image
+
+- (void)addImage:(LGPdfImage *)element {
+    [imageController add:element withContext:LGPdf_pdfContext withNowHeight:LGPdf_write_height];
+    LGPdf_write_height = LGPdf_write_height + [imageController getImageHeight:element];
 }
 
 @end

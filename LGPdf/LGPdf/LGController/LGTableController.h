@@ -18,5 +18,6 @@
 @interface LGTableController : NSObject
 
 - (void) addTable :(LGPdfTable *) element withContext:(CGContextRef)pdfContext withPageInfo:(LGPageInfo)pageInfo ;
+- (int) getTableHeight;
 
 @end

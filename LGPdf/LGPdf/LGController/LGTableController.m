@@ -164,4 +164,12 @@
     return 0.0f;
 }
 
+- (int) getTableHeight {
+    int height = 0;
+    for (NSNumber *number in LGPdf_tableRowHeights) {
+        height = height + [number intValue];
+    }
+    return height;
+}
+
 @end

@@ -11,9 +11,11 @@
 #import "LGPdfPageInfo.h"
 #import "LGPdfText.h"
 #import "LGPdfCell.h"
+#import "LGPdfImage.h"
 #import "LGPdfTable.h"
 #import "LGTableController.h"
 #import "LGTextController.h"
+#import "LGImageController.h"
 
 //! Project version number for LGPdf.
 FOUNDATION_EXPORT double LGPdfVersionNumber;
@@ -22,8 +24,6 @@ FOUNDATION_EXPORT double LGPdfVersionNumber;
 FOUNDATION_EXPORT const unsigned char LGPdfVersionString[];
 
 // In this header, you should import all the public headers of your framework using statements like #import <LGPdf/PublicHeader.h>
-
-
 
 @import UIKit;
 
@@ -40,5 +40,6 @@ FOUNDATION_EXPORT const unsigned char LGPdfVersionString[];
 
 - (void)addText:(LGPdfText *)element;
 - (void)addTable:(LGPdfTable *)element;
+- (void)addImage:(LGPdfImage *)element;
 
 @end
