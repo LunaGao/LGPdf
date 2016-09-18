@@ -15,6 +15,7 @@
     LGTableController *tableController;
     LGTextController *textController;
     LGImageController *imageController;
+    NSString* pdfFileFullPath;
 }
 
 #pragma mark - pdf create
@@ -32,12 +33,16 @@
 
 - (void) setFileName:(NSString *) fileName pageSize:(LGPageInfo) pageInfo {
     NSString *path = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES)[0];
-    self.pdfFileFullPath = [path stringByAppendingPathComponent:fileName];
+    pdfFileFullPath = [path stringByAppendingPathComponent:fileName];
     LGPdf_pageInfo = pageInfo;
     
     tableController = [[LGTableController alloc] init];
     textController = [[LGTextController alloc] init];
     imageController = [[LGImageController alloc] init];
+}
+
+- (NSString *)getPdfFile {
+    return pdfFileFullPath;
 }
 
 #pragma mark - pdf page
@@ -49,7 +54,7 @@
 
 - (void)readyToWrite {
     CGRect bounds = CGRectMake(0,0,LGPdf_pageInfo.width,LGPdf_pageInfo.height);
-    UIGraphicsBeginPDFContextToFile(self.pdfFileFullPath, bounds, nil);
+    UIGraphicsBeginPDFContextToFile(pdfFileFullPath, bounds, nil);
     LGPdf_pdfContext = UIGraphicsGetCurrentContext();
 }
 

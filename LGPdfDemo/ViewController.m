@@ -84,12 +84,9 @@
     
     [pdf addImage:image];
     
-    // https://cdn.rawgit.com/LunaGao/LGPdf/master/Image/pdf.png
-//    https://cdn.rawgit.com/LunaGao/LGPdf/master/Image/pdf.svg
-    
-    
-    
     [pdf closeToWrite];
+    
+    NSLog(@"%@", [pdf getPdfFile]);
 }
 
 - (void) addCell:(LGPdfTable*) table WithValue:(NSString *)value WithColSpan:(int) colspan WithRowSpan:(int) rowSpan {

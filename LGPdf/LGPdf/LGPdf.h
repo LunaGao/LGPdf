@@ -29,14 +29,13 @@ FOUNDATION_EXPORT const unsigned char LGPdfVersionString[];
 
 @interface LGPdf : NSObject
 
-@property NSString* pdfFileFullPath;
-
 + (LGPdf*) createPDF;
 
 - (void)setFileName:(NSString *)fileName pageSize:(LGPageInfo)pageInfo;
 - (void)readyToWrite;
 - (void)newPage;
 - (void)closeToWrite;
+- (NSString *)getPdfFile;
 
 - (void)addText:(LGPdfText *)element;
 - (void)addTable:(LGPdfTable *)element;
