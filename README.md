@@ -52,3 +52,9 @@ Please see the demo code
 
     [pdf addImage:image];
 ```
+
+##Close Pdf
+```
+    [pdf closeToWrite];
+    NSLog(@"%@", [pdf getPdfFile]);
+```
