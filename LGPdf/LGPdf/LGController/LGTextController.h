@@ -6,6 +6,8 @@
 //  Copyright © 2016年 luna.gao. All rights reserved.
 //
 
+#ifndef __LGTextController
+
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 #import "LGPdfText.h"
@@ -23,3 +25,5 @@
 - (int)getTextHeight;
 
 @end
+
+#endif

@@ -6,6 +6,8 @@
 //  Copyright © 2016年 luna.gao. All rights reserved.
 //
 
+#ifndef __LGImageController
+
 #import <Foundation/Foundation.h>
 #import "LGPdfImage.h"
 
@@ -15,3 +17,6 @@
 - (void) add:(LGPdfImage *)element withContext:(CGContextRef)pdfContext withNowHeight:(int)LGPdf_write_height;
 
 @end
+
+
+#endif

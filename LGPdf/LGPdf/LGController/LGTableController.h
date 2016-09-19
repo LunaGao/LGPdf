@@ -6,6 +6,8 @@
 //  Copyright © 2016年 luna.gao. All rights reserved.
 //
 
+#ifndef __LGTableController
+
 #import <Foundation/Foundation.h>
 #import "LGPdfTable.h"
 #import "LGPdfPageInfo.h"
@@ -21,3 +23,5 @@
 - (int) getTableHeight;
 
 @end
+
+#endif

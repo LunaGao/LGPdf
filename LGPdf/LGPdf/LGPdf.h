@@ -8,14 +8,16 @@
 
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
+
+#import "LGTableController.h"
+#import "LGTextController.h"
+#import "LGImageController.h"
+
 #import "LGPdfPageInfo.h"
 #import "LGPdfText.h"
 #import "LGPdfCell.h"
 #import "LGPdfImage.h"
 #import "LGPdfTable.h"
-#import "LGTableController.h"
-#import "LGTextController.h"
-#import "LGImageController.h"
 
 //! Project version number for LGPdf.
 FOUNDATION_EXPORT double LGPdfVersionNumber;

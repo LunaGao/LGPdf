@@ -6,6 +6,8 @@
 //  Copyright © 2016年 luna.gao. All rights reserved.
 //
 
+#ifndef __LGLineController
+
 #import <Foundation/Foundation.h>
 #import "LGPdfLine.h"
 
@@ -14,3 +16,5 @@
 - (void)add:(LGPdfLine *)element withContext:(CGContextRef)pdfContext;
 
 @end
+
+#endif

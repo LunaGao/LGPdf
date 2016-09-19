@@ -153,13 +153,13 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5E3C2B711D81B54900E96976 /* LGTextController.h in Headers */,
 				5E6335B61D8E2601009A4D46 /* LGPdfImage.h in Headers */,
 				5E6335B21D8E25AE009A4D46 /* LGImageController.h in Headers */,
 				5E6335801D8945BC009A4D46 /* LGPdfPoint.h in Headers */,
 				5EA4A2E41D8653520030F2AB /* LGPdfCellConfig.h in Headers */,
 				5E3C2B751D8255AC00E96976 /* LGPdfLine.h in Headers */,
 				5E3C2B791D82568600E96976 /* LGLineController.h in Headers */,
-				5E3C2B711D81B54900E96976 /* LGTextController.h in Headers */,
 				5E3C2B6D1D81B53100E96976 /* LGTableController.h in Headers */,
 				5E3C2B5E1D8155EA00E96976 /* LGPdfTable.h in Headers */,
 				5E3C2B621D81598F00E96976 /* LGPdfCell.h in Headers */,
