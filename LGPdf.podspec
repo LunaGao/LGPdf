@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "LGPdf"
-  s.version      = "0.1.1-alpha"
+  s.version      = "v0.1.3-alpha"
   s.summary      = "Create Pdf file in iOS"
 
   # This description is used to generate tags and improve search results.
