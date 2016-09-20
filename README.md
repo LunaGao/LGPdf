@@ -17,7 +17,7 @@ This project is the Demo project
 ##Pod
 
 ```
-    pod ???
+    pod 'LGPdf', '~> 0.1.3-alpha'
 ```
 
 #Gudie
