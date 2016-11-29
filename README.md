@@ -1,3 +1,5 @@
+![Logo](https://cdn.rawgit.com/LunaGao/LGPdf/master/Image/lgpdf.png)
+
 # LGPdf
 [![Bless](https://cdn.rawgit.com/LunaGao/BlessYourCodeTag/master/tags/god.svg)](http://lunagao.github.io/BlessYourCodeTag/)
 
