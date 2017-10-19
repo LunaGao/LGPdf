@@ -3,28 +3,28 @@
 # LGPdf
 [![Bless](https://cdn.rawgit.com/LunaGao/BlessYourCodeTag/master/tags/god.svg)](http://lunagao.github.io/BlessYourCodeTag/)
 
-#Create pdf file in iOS
+# Create pdf file in iOS
 
 Easy way to create Pdf file in iOS.
 
-#Demo
+# Demo
 
 This project is the Demo project
 
-#Pdf screenshot
+# Pdf screenshot
 ![Screenshot](https://cdn.rawgit.com/LunaGao/LGPdf/master/Image/screenshot.png)
 
-#How to Use
+# How to Use
 
-##Pod
+## Pod
 
 ```
     pod 'LGPdf', '~> 0.1.3-alpha'
 ```
 
-#Gudie
+# Gudie
 
-##Init Pdf
+## Init Pdf
 ```
     LGPdf *pdf = [LGPdf createPDF];
     struct LGPageInfo size = {A4_L,A4_S};
@@ -33,7 +33,7 @@ This project is the Demo project
     [pdf newPage];
 ```
 
-##Text
+## Text
 
 ```
     LGPdfText* text = [[LGPdfText alloc] init];
@@ -41,10 +41,10 @@ This project is the Demo project
     [pdf addText:text];
 ```
 
-##Table
+## Table
 Please see the demo code
 
-##Image
+## Image
 ```
     LGPdfImage *image = [[LGPdfImage alloc] init];
     UIImage *uiImage = [UIImage imageNamed:@"pdf_png"];
@@ -55,7 +55,7 @@ Please see the demo code
     [pdf addImage:image];
 ```
 
-##Close Pdf
+## Close Pdf
 ```
     [pdf closeToWrite];
     NSLog(@"%@", [pdf getPdfFile]);
